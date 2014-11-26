@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.ImageInterfaceController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <ImageView fx:id="imageView" onSwipeLeft="#nextImage" onSwipeRight="#previousImage" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+         </center>
+         <right>
+            <BorderPane BorderPane.alignment="CENTER">
+               <top>
+                  <Button fx:id="quit" mnemonicParsing="false" text="Retour" BorderPane.alignment="CENTER" />
+               </top>
+               <bottom>
+                  <Button fx:id="print" mnemonicParsing="false" onAction="#printAction" text="Imprimer !" BorderPane.alignment="CENTER" />
+               </bottom>
+               <center>
+                  <Button fx:id="next" mnemonicParsing="false" onAction="#nextImage" text="Suivante" BorderPane.alignment="CENTER" />
+               </center>
+               <padding>
+                  <Insets bottom="100.0" />
+               </padding>
+            </BorderPane>
+         </right>
+         <left>
+            <Button fx:id="previous" mnemonicParsing="false" onAction="#previousImage" text="Précédente" BorderPane.alignment="CENTER" />
+         </left>
+      </BorderPane>
+   </children>
+</AnchorPane>
