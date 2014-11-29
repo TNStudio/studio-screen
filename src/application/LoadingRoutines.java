@@ -53,7 +53,13 @@ public class LoadingRoutines {
 				}
 			}
 		}
+		System.out.println("Avant shuffle : "+photoList.get(0));
 		FXCollections.shuffle(photoList);
-		return (ObservableList<Photo>) photoList.subList(0, 50);   
+		System.out.println("Après shuffle : "+photoList.get(0));
+		if(photoList.size() < 50) {
+			return photoList;
+		} else {
+			return (ObservableList<Photo>) photoList.subList(0, 50);
+		}   
 	}
 }

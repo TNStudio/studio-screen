@@ -79,7 +79,7 @@ public class MainInterfaceController implements MyObserver {
 		next = new ImageView(imageToDisplay);
 
 		next.setFitHeight(Screen.getPrimary().getBounds().getHeight()); //set its size
-
+		next.setPreserveRatio(true);
 		c.add(next);
 
 		FadeTransition fadein = new FadeTransition(Duration.seconds(1), next);
