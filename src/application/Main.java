@@ -24,10 +24,10 @@ import javafx.scene.layout.AnchorPane;
  */
 public class Main extends Application {
 
-	private int largeur_photo = 1920; //default value
+	private int largeur_photo = 1440; //default value
 	private int nb_photo = 5; //default value
 	private ObservableList<Photo> photoList; //list of photographer
-	private String folder ="D:\\Utilisateur\\Dropbox\\Gala2014"; //default value
+	private String folder ="E:\\Dropbox\\Gala2014"; //default value
 	private Stage primaryStage;  //the stage containing the user interface
 	private LoadingRoutines routine; //the routine scaning the files
 
@@ -81,7 +81,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) { //called at start up
 		this.primaryStage=primaryStage; //Instantiate the first window
-		this.primaryStage.initStyle(StageStyle.UNDECORATED); //set it undecorated
+		//this.primaryStage.initStyle(StageStyle.UNDECORATED); //set it undecorated
 		Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds(); //create a rectangle that fit the main screen
 		primaryStage.setX(primaryScreenBounds.getMinX());//put the first window at the origin of the screen
 		primaryStage.setY(primaryScreenBounds.getMinY());//see above

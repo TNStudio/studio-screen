@@ -59,7 +59,13 @@ public class LoadingRoutines {
 		if(photoList.size() < 50) {
 			return photoList;
 		} else {
-			return (ObservableList<Photo>) photoList.subList(0, 50);
+			ObservableList<Photo> subList;
+			subList = FXCollections.observableArrayList();
+			for(int i=0;i<50;i++){
+				subList.add(photoList.get(i));
+			}
+			return subList;
+			//return (ObservableList<Photo>) photoList.subList(0, 50);
 		}   
 	}
 }

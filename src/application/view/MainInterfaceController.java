@@ -87,7 +87,7 @@ public class MainInterfaceController implements MyObserver {
 		fadein.setFromValue(0);
 		fadein.setToValue(1);
 
-		PauseTransition delay = new PauseTransition(Duration.seconds(1));
+		PauseTransition delay = new PauseTransition(Duration.seconds(5));
 		SequentialTransition st;
 		if (current != null) {
 			ScaleTransition dropout;
